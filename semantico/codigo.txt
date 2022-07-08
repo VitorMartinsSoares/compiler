@@ -1,0 +1,11 @@
+#include <stdio.h> 
+int main ()
+{
+    int a = ( 3 );
+    float b = 5;
+    int x = b - ( a );
+    int y = c + ( 11 );
+    int soma = teste + b;
+    a = ( b + ) x * y;
+    return 0;
+}

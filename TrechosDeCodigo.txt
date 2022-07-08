@@ -1,0 +1,219 @@
+A
+((a*b)*(c-d))/((a*d)+(g/h))
+0 Registradores
+load c
+sub d
+store t1
+load g
+div h
+store t2
+load a
+mult d
+add t2
+store t3
+load a
+mult b
+mult t1
+div t3
+store x
+
+1 Registradores
+move c r0
+sub d r0
+move r0 t1
+move g r0
+div h r0
+move r0 t2
+move a r0
+mult d r0
+add t2 r0
+move r0 t3
+move a r0
+mult b r0
+mult t1 r0
+div t3 r0
+move r0 x
+
+2 Registradores
+move c r0
+sub d r0
+move r0 t1
+move g r1
+div h r1
+move a r0
+mult d r0
+add r1 r0
+move a r1
+mult b r1
+mult t1 r1
+div r0 r1
+move r0 x
+
+B
+((a+b)*(c/d)) / ((d*c)*(a+b)/(c*a)+(c-a))
+((t1)*(t3)) / ((d*c)*(t1)/(c*a)+(t2))
+((t1)*(t3)) / ((d*c)*(t1)/t4)
+((t1)*(t3)) / (t5)
+(t3) / (t5)
+0 Registradores
+load a
+add b
+store t1
+load c
+sub a
+store t2
+load a
+mult c
+add t2
+store t4
+load d
+mult c
+mult t1
+div t4
+store t5
+load c
+div d
+mult t1
+div t5
+store x
+
+1 Registradores
+move a r0
+add b r0
+move r0 t1
+move c r0
+sub a r0
+move r0 t2
+move a r0
+mult c r0
+add t2 r0
+move r0 t4
+move d r0
+mult c r0
+mult t1 r0
+div t4 r0
+move r0 t5
+move c r0
+div d r0
+mult t1 r0
+div t5 r0
+move r0 x
+
+2 Registradores
+move a r0
+add b r0
+move r0 t1
+move c r0
+sub a r0
+move a r1
+mult c r1
+add r0 r1
+move d r0
+mult c r0
+mult t1 r0
+div r1 r0
+move c r1
+div d r1
+mult t1 r1
+div t0 r1
+move r0 x
+
+x=0
+x=0+x*2+(x+y)-(0*y)
+x=1+x*2+(x+y)-(1*y)
+x=2+x*2+(x+y)-(2*y)
+x=0
+x=0+x*2+(x+y)-(t1)
+x=1+x*2+(x+y)-(1*y)
+x=2+x*2+(x+y)-(2*y)
+
+0 Registradores
+load 0
+mult y
+store t1
+load x
+mult 2
+add 0
+add x
+add y
+add t1
+store x
+load 1
+mult y
+store t1
+load x
+mult 2
+add 1
+add x
+add y
+add t1
+store x
+load 2
+mult y
+store t1
+load x
+mult 2
+add 2
+add x
+add y
+add t1
+store x
+
+1 Registradores
+move 0 r0
+mult y r0
+move r0 t1
+move x r0
+mult 2 r0
+add 0 r0
+add x r0
+add y r0
+add t1 r0
+move r0 x
+move 1 r0
+mult y r0
+move r0 t1
+move x r0
+mult 2 r0
+add 1 r0
+add x r0
+add y r0
+add t1 r0
+move r0 x 
+move 2 r0
+mult y r0
+move r0 t1
+move x r0
+mult 2 r0
+add 2 r0
+add x r0
+add y r0
+add t1 r0
+move r0 x
+
+2 Registradores
+move 0 r1
+mult y r1
+move x r0
+mult 2 r0
+add 0 r0
+add x r0
+add y r0
+add r1 r0
+move r0 x
+move 1 r1
+mult y r1
+mult 2 r0
+add 1 r0
+add x r0
+add y r0
+add r1 r0
+move r0 x 
+move 2 r1
+mult y r1
+mult 2 r0
+add 2 r0
+add x r0
+add y r0
+add r1 r0
+move r0 x
