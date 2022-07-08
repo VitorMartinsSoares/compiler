@@ -58,5 +58,6 @@ for x in arq:
                 if(y[t] == ','):
                     variaveisDeclarada.append(y[t+1])
                     tiposvariaveis.append(y[0])
-
-print(codigofuncao)
+arq = open("codigoIntermediario.py","w")
+for i in range(len(funcoes)):
+    print(funcoes[i], tiposfuncoes[i],parametrosfuncoes[i],codigofuncao[i])
