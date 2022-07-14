@@ -90,10 +90,6 @@ for x in arq:
                 print("retorno final")
             else:
                 print("variavel nao declarada")
-
-
-
-
     ##Parenteses e chaves, erros
     if "{" in x:
         chaves.append(1)

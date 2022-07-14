@@ -4,7 +4,6 @@ tokensIni = []
 operadores = ["+","-","*","/","="]
 reservadas = ["#include","<stdio.h>","main()","return","int","{","}",";","const","while","if","float","double"]
 numeros = ["0","1","2","3","4","5","6","7","8","9"]
-
 for x in arq:
     x = x.strip()
     lista = x.split()
@@ -16,7 +15,6 @@ for x in arq:
             tokensIni.append(";")
         else:
             tokensIni.append(y)
-
 for x in tokensIni:
     if x in operadores:
         print(x+" - Operador")
